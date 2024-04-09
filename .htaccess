@@ -15,6 +15,10 @@ RewriteCond %{REQUEST_FILENAME}\.inc.php -f
 RewriteRule ^404  404.inc.php [NC]
 RewriteRule ^404.  404.inc.php
 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^services  services.php [NC]
+RewriteRule ^services.  services.php
 
 
 
