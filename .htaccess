@@ -2,4 +2,20 @@ RewriteEngine on
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^about/([0-9]+)/([0-9a-zA-z_-]+) about.php?id=$1&name=$2 [NC,L]
+RewriteRule ^about  about.php [NC,L]
+RewriteRule ^about/  about.php [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME} -f 
+RewriteRule ^css 404 [NC]
+RewriteRule ^css. 404
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.inc.php -f
+RewriteRule ^404  404.inc.php [NC]
+RewriteRule ^404.  404.inc.php
+
+
+
+
+
