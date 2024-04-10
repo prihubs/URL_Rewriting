@@ -1,0 +1,17 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^hello home?nt [NC] 
+RewriteRule ^hello. home?nt 
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}/.php !-f
+RewriteRule ^home index.php [NC] 
+RewriteRule ^home. index.php [NC] 
+RewriteRule ^home?i index.php?not_found [NC] 
+
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_FILENAME} -f
+# RewriteRule ^ index.php?not_found [NC] 
+# RewriteRule ^. index.php [NC] 
+# RewriteRule ^home?id index.php?id [NC] 
