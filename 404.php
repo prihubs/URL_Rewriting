@@ -14,9 +14,9 @@
 
     <div class="container">
         <div class="errbx">
-            <h1 class="t404err">Oops...Your Search 
+            <h1 class="t404err">PHP Page Oops...Your Search 
                 <?php if(isset($_GET['error'])){ $error = $_GET['error']; echo $error; } ?>  
-                returned no result(s)</h1> <br/>
+                returned no result(s)!</h1> <br/>
             <a class="link" href="#"> <button class="btn"> Return to homepage </button></a>
         </div>
     </div>

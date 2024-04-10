@@ -1,15 +1,8 @@
-RewriteEngine on
+Options +MultiViews
 
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}/.php !-f
-RewriteRule ^home index.php [NC,L] 
-RewriteRule ^home. index.php [NC,L]
+RewriteEngine On
 
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}/.php !-f
-RewriteRule ^home?ne index.php?ne [NC,L] 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^about about.php [NC]
-RewriteRule ^about. about.php  
+ErrorDocument 404 /404.php
